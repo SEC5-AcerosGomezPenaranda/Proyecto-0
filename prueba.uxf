@@ -1,0 +1,90 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>486</x><y>252</y><w>189</w><h>63</h></coordinates><panel_attributes>Participante
+--
+nombre: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>234</x><y>0</y><w>189</w><h>63</h></coordinates><panel_attributes>Jugador
+--
+nombre: String
+posicion: String
+valor: double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>234</x><y>531</y><w>189</w><h>63</h></coordinates><panel_attributes>Campeonato
+--
+nombre: String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>495</x><y>108</y><w>189</w><h>63</h></coordinates><panel_attributes>Equipo Fantasia
+--
+nombre: String
+presupuesto: double
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>234</x><y>108</y><w>189</w><h>63</h></coordinates><panel_attributes>Equipo Real
+--
+nombre: String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>279</y><w>189</w><h>63</h></coordinates><panel_attributes>Temporada
+--
+nombre: String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>234</x><y>279</y><w>189</w><h>63</h></coordinates><panel_attributes>Fecha
+--
+fecha: Date
+hora: Time
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>162</y><w>36</w><h>135</h></coordinates><panel_attributes>lt=&lt;-
+m1=2</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>306</y><w>72</w><h>36</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes><additional_attributes>10;10;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>54</y><w>45</w><h>72</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>585</x><y>162</y><w>36</w><h>108</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>81</x><y>135</y><w>171</w><h>162</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes><additional_attributes>10;160;10;10;170;10</additional_attributes></element><element><id>Relation</id><coordinates><x>72</x><y>333</y><w>180</w><h>261</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>180;260;10;260;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>414</x><y>135</y><w>99</w><h>459</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes><additional_attributes>10;480;40;480;40;10;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>414</x><y>279</y><w>90</w><h>333</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes><additional_attributes>10;340;60;340;60;10;80;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>765</x><y>108</y><w>189</w><h>63</h></coordinates><panel_attributes>Alineacion
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>414</x><y>36</y><w>207</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+m1=15</panel_attributes><additional_attributes>200;80;200;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>675</x><y>117</y><w>108</w><h>36</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>675</x><y>144</y><w>108</w><h>36</h></coordinates><panel_attributes>lt=&lt;-
+m1=1</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>882</x><y>207</y><w>252</w><h>63</h></coordinates><panel_attributes>-Una alineación solo puede tener 1 arquero, 
+4 defensores, 4 mediocampistas y 2 delanteros.
+
+-Cada alineacion debe tener un capitán
+
+bg=blue
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>531</x><y>351</y><w>171</w><h>153</h></coordinates><panel_attributes>-Cada participante solo 
+puede tener un equipo 
+de fantasia por temporada.
+
+-Un jugador puede estar en 
+mas de un equipo de fantasia
+al mismo tiempo.
+
+-Un equipo no puede jugar dos
+partidos en la misma fecha
+
+-Un campeonato solo puede tener
+una temporada; una instancia de
+campeonato contiene la temporada
+dada
+
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>702</x><y>207</y><w>144</w><h>108</h></coordinates><panel_attributes>-Un equipo de fantasía 
+debe tener 15 jugadores.
+
+-La configuracion general
+debe hacerse a la media 
+noche anterior al la fecha 
+del partido
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>234</x><y>405</y><w>189</w><h>63</h></coordinates><panel_attributes>Partido
+--
+hayGanador: boolean
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>414</x><y>126</y><w>126</w><h>351</h></coordinates><panel_attributes>lt=&lt;-
+m1=2
+Local y Visitante
+fg=green
+
+
+
+
+
+
+
+
+</panel_attributes><additional_attributes>10;360;30;360;30;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>333</y><w>45</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element></diagram>
